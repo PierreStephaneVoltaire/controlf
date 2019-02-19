@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/elasticsearch": "^5.0.31",
     "@types/jest": "24.0.5",
     "@types/node": "11.9.4",
-    "@types/react": "16.8.3",
+    "@types/react": "^16.8.3",
     "@types/react-dom": "16.8.2",
+    "elasticsearch": "^15.4.1",
+    "element-react": "^1.4.32",
+    "element-theme-default": "^1.4.13",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-render-html": "^0.6.0",
     "react-scripts": "2.1.5",
     "typescript": "3.3.3"
   },
