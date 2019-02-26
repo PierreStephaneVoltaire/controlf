@@ -1,21 +1,32 @@
 {
-  "name": "simple-search",
+  "name": "controlf",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/base64url": "^2.0.0",
     "@types/elasticsearch": "^5.0.31",
     "@types/jest": "24.0.5",
     "@types/node": "11.9.4",
     "@types/react": "^16.8.3",
     "@types/react-dom": "16.8.2",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/urlencode": "^1.1.0",
+    "base64-url": "^2.2.0",
+    "base64url": "^3.0.1",
     "elasticsearch": "^15.4.1",
     "element-react": "^1.4.32",
     "element-theme-default": "^1.4.13",
+    "fetch-base64": "^2.1.2",
+    "file-base64": "^1.0.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-file-base64": "^1.0.3",
     "react-render-html": "^0.6.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
-    "typescript": "3.3.3"
+    "typescript": "3.3.3",
+    "uid": "0.0.2",
+    "urlencode": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +42,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "electron": "^4.0.5",
+    "electron-builder": "^20.38.5"
+  }
 }
