@@ -56,7 +56,7 @@ class Uploadc extends React.Component<UploadcProps, UploadcState> {
     return (
       <Layout.Row>
         <Layout.Col span="24"><div>
-          <FileBase64
+          <FileBase64 className="uploader"
             multiple={true}
             onDone={this.getFiles.bind(this)} />
         </div>
