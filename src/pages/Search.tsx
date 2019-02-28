@@ -9,8 +9,6 @@ interface appState {
   client: Client
   elasticIsRunning: boolean;
   querryRes: any[]
-
-
 }
 interface doc {
   title: String

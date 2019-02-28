@@ -3,18 +3,12 @@ import { Layout, Input, Select, Button, Card, Upload } from "element-react"
 import { Route } from 'react-router';
 import { Client, SearchParams } from 'elasticsearch'
 import renderHTML from 'react-render-html';
-import * as uid from "uid"
-import { async } from "q";
 import FileBase64 from 'react-file-base64';
-var urlencode = require('urlencode');
-import base64url from "base64url";
+import { string } from "prop-types";
 
 interface UploadcState {
-
   listOfFlies: any[]
   client: Client
-
-
 }
 interface UploadcProps {
   client: Client
@@ -31,21 +25,17 @@ class Uploadc extends React.Component<UploadcProps, UploadcState> {
       client: this.props.client
     }
     this.addToEs = this.addToEs.bind(this)
-
   }
   addToEs() {
     this.state.listOfFlies.forEach(async (file) => {
-     const reg=/data:\w+;base64,/;
+      let data: string = file.base64
       await this.state.client.index(
         {
           index: "simple_search",
           type: "doc",
-          id: uid(),
           pipeline: "attachment",
-
           body: {
-            data:  base64url.fromBase64(file.base64).replace(reg,"")
-            , title: file.name
+            data: data.replace(/data:.+?,/, "")
           }
         }
       ).then((r) => {
