@@ -1,3 +1,29 @@
+# ControlF
+
+## Description
+A simple search application using React and Typescript for the front-end.
+The application interacts with elasticsearch. It allows the user to upload documents and search through them.
+
+## Es plugins used
+* ingest-attachment
+
+## TODO
+* [X] connect front-end to ES
+* [ ] Add elastic stack container
+* [ ] Add CI pipeline
+* [ ] Unit Test
+
+## Features
+* [X] Search
+* [X] Upload
+* [ ] Write and save documents
+* [ ] Add Notes
+* [ ] Save snippets to clipboard
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
