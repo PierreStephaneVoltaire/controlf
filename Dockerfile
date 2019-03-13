@@ -1,7 +1,3 @@
-
-
-
-
 FROM node:8 as app-build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
