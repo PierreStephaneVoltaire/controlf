@@ -9,7 +9,7 @@ The application interacts with elasticsearch. It allows the user to upload docum
 
 ## TODO
 * [X] connect front-end to ES
-* [ ] Add elastic stack container
+* [X] Add elastic stack container
 * [ ] Add CI pipeline
 * [ ] Unit Test
 
