@@ -8,12 +8,16 @@ import { string } from "prop-types";
 
 interface UploadcState {
   client: Client,
+  doc:doc
 }
 interface UploadcProps {
   client: Client
 }
 interface doc {
   title: String
+  data:string
+  type:string
+  date_uploaded:string
 }
 
 class Uploadc extends React.Component<UploadcProps, UploadcState> {
@@ -23,12 +27,18 @@ class Uploadc extends React.Component<UploadcProps, UploadcState> {
 
     this.state = {
       client: this.props.client,
+    doc:{
+        title:"",
+        data:"",
+        type:"",
+        date_uploaded:""
+      }
     }
     this.addToEs = this.addToEs.bind(this)
   }
   addToEs() {
-    let el: any = document.getElementsByClassName("myfile")[0].children[0];
-    let reader = new FileReader();
+    let el:any = document.getElementsByClassName("myfile")[0].children[0];
+    const reader = new FileReader();
     reader.readAsDataURL(el.files[0]);
     reader.onload = async () => {
       let data: string = reader.result as string;
@@ -48,19 +58,23 @@ class Uploadc extends React.Component<UploadcProps, UploadcState> {
       })
     }
   }
+  
   render() {
     return (
-      <Layout.Row>
-        <Layout.Col span="24"><div>
+      <div>
+      <Layout.Row >
+        <Layout.Col span="24">
           <Input className="myfile" type="file"
             placeholder="Please input" />
-        </div>
         </Layout.Col>
+        </Layout.Row>
+        <Layout.Row >
         <Layout.Col span="24"><div>
           <Button onClick={this.addToEs}>Upload</Button>
         </div>
         </Layout.Col>
       </Layout.Row>
+      </div>
     )
   }
 
